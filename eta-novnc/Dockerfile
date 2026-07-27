@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:latest
 FROM $BUILD_FROM
 
 RUN apk add --no-cache \
@@ -13,8 +13,6 @@ RUN git clone --depth 1 https://github.com/novnc/websockify.git /opt/websockify
 
 RUN pip3 install --break-system-packages \
     numpy
-
-COPY rootfs /
 
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh
