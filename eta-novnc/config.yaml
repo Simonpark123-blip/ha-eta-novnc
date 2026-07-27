@@ -1,23 +1,19 @@
 name: ETA noVNC
-version: "1.0.1"
+version: "1.0.2"
 slug: eta_novnc
 description: noVNC Webinterface für eine ETA ETAtouch VNC-Verbindung
-url: "https://github.com/novnc/noVNC"
+
 arch:
-  - amd64
   - aarch64
-  - armv7
+
 startup: application
 boot: auto
 init: false
 
-ports:
-  6080/tcp: 6080
-
-ports_description:
-  6080/tcp: noVNC Webinterface
-
-webui: "http://[HOST]:[PORT:6080]"
+ingress: true
+ingress_port: 6080
+panel_icon: mdi:fire
+panel_title: ETA ETAtouch
 
 options:
   vnc_host: "192.168.2.160"
