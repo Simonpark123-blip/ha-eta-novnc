@@ -1,5 +1,5 @@
 name: ETA noVNC
-version: "1.0.4"
+version: "1.0.5"
 slug: eta_novnc
 description: noVNC Webinterface für eine ETA ETAtouch VNC-Verbindung
 
@@ -10,10 +10,11 @@ startup: application
 boot: auto
 init: false
 
-ingress: true
-ingress_port: 6080
-panel_icon: mdi:fire
-panel_title: ETA ETAtouch
+ports:
+  6080/tcp: 6080
+
+ports_description:
+  6080/tcp: ETA noVNC
 
 options:
   vnc_host: "192.168.2.160"
