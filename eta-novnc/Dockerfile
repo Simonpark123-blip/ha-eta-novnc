@@ -14,6 +14,8 @@ RUN git clone --depth 1 \
     https://github.com/novnc/websockify.git \
     /opt/websockify
 
+COPY index.html /opt/noVNC/index.html
+
 COPY run.sh /run.sh
 
 RUN chmod a+x /run.sh

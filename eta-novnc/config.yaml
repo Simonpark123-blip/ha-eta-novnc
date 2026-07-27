@@ -1,5 +1,5 @@
 name: ETA noVNC
-version: "1.0.3"
+version: "1.0.4"
 slug: eta_novnc
 description: noVNC Webinterface für eine ETA ETAtouch VNC-Verbindung
 
